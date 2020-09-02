@@ -3,8 +3,9 @@ package com.vb.gamesreleases.ui.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.vb.gamesreleases.R
+import com.vb.gamesreleases.ui.views.GamePageView
 
-class GamePageActivity : AppCompatActivity() {
+class GamePageActivity : AppCompatActivity(), GamePageView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

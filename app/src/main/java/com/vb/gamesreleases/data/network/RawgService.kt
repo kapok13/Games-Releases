@@ -15,6 +15,10 @@ interface RawgService {
     fun getUpcomingGames(@Query("dates") date: String,
                          @Query("ordering") order: String): Observable<Upcoming>
 
+    @GET("api/games")
+    fun getTopGame(@Query("ordering") order: String,
+                  @Query("genres") genre: String): Observable<Upcoming>
+
     companion object Factory{
         fun createService(): RawgService{
             val retrofit = Retrofit.Builder()

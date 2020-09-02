@@ -13,4 +13,8 @@
     <string name="genres_text">Ganres</string>
     <string name="release_date_text">Release date</string>
     <string name="metacritic_text">Metacritic</string>
+    <string name="action">Action</string>
+    <string name="rpg">RPG</string>
+    <string name="shooter">Shooter</string>
+    <string name="strategy">Strategy</string>
 </resources>

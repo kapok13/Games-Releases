@@ -16,6 +16,10 @@ class Repository(val rawgService: RawgService) {
         return rawgService.getUpcomingGames(date, ordering)
     }
 
+    fun getTop(ordering: String, genres: String): Observable<Upcoming>{
+        return rawgService.getTopGame(ordering,genres)
+    }
+
     fun getAllGames(context: Context): List<MyGamesEntities>{
         return GamesDb.getGamesDb(context)!!.myGamesDao().getGames()
     }

@@ -1,23 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
 
     <ProgressBar
         android:id="@+id/ltop_loading_prgs"
         android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerInParent="true"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/top_recycler"
+    <TextView
+        android:id="@+id/rpg_title_tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/rpg"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
 
+    <HorizontalScrollView
+        android:id="@+id/rpg_container"
+        android:layout_alignTop="@+id/rpg_title_tv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rpg_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/action_title_tv"
+        android:layout_alignTop="@id/rpg_container"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action"/>
+
+    <HorizontalScrollView
+        android:id="@+id/action_container"
+        android:layout_alignTop="@+id/action_title_tv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/action_recycler"
+            android:layout_width="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/strategy_title_tv"
+        android:layout_alignTop="@id/action_container"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strategy"/>
+
+    <HorizontalScrollView
+        android:id="@+id/strategy_container"
+        android:layout_alignTop="@+id/strategy_title_tv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/strategy_recycler"
+            android:layout_width="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/shooter_title_tv"
+        android:layout_alignTop="@id/strategy_container"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shooter"/>
+
+    <HorizontalScrollView
+        android:id="@+id/shooter_container"
+        android:layout_alignTop="@+id/shooter_title_tv"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shooter_recycler"
+            android:layout_width="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"/>
+
+    </HorizontalScrollView>
 
 
 </RelativeLayout>
+
+</ScrollView>

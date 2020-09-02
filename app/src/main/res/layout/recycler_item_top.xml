@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/top_image"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"/>
     <TextView
-        android:id="@+id/top_name_text"
+        android:id="@+id/top_item_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
+        tools:text="title"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="54dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"/>
+
 
 
 
